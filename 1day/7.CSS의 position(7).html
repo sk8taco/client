@@ -1,0 +1,60 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>7.CSS의 position(7).html</title>
+  <!--
+      position->영역을 설정할 때 같이 사용하는 속성 => width, height(크기)
+                (위치) left, top
+      1.default -> static => 순차적으로, 작성한 순서대로 화면에 보이도록 배치하는 영역설정
+      2.absolute -> 절대좌표(기준점 => 브라우저의 좌측상단) => left,top(위치) / width,height(크기)를 이용
+      3.relative -> 상대적인 좌표배치 방법 => 실행결과가 static과 비슷 - left, top을 부여, 위치가 변경된 상태
+      4. fixed -> 고정된 위치에서 움직이지 않는 속성. 스크롤을 하여도 스크린상의 고정된 위치에만 존재.
+  -->
+  <style type="text/css">
+      * {
+          margin:0px;
+          padding:0px;
+      }
+      div{
+          text-align:center;
+          line-height:60px;
+          font-size:12px;
+      }
+      .rel1{
+          position:relative;
+      }
+      .rel2{
+          position:relative;
+          top:30px;
+          left:40px;
+      }
+      .rel3{
+          position:absolute;
+          top:30px; 
+          left:40px;
+      }
+     .fix{
+          position:fixed;
+          bottom:0px;
+          right:0px; /* 우측하단에 위치 */
+          width:200px;
+          border:3px solid #0066ff;
+          background-color:#fff;
+          font-size:12px;
+          text-align:center;
+      }
+  </style>
+ </head>
+ <body>
+     <div style="background:#f00; width:60px; height:60px;">BOX1</div>
+     <!--<div style="position:static; background:#00f; width:60px; height:60px;">BOX2</div>-->
+     <div class="fix">fixed된 문자열 연습</div>
+     <div class="rel1" style="background:#0ff; width:60px; height:60px;">BOX3</div>
+     <div class="rel2" style="background:#ff0; width:60px; height:60px;">BOX4</div>
+     <div class="rel3" style="background:#0f0; width:60px; height:60px;">BOX5</div>     
+     
+     
+     
+ </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- meta 속성 : 한글처리(charcset) , 페이지 이동(자동으로 이동할 때) 
+		http-equiv = "refresh" (새로운 페이지가 보여질 수 있도록 새로고침)
+		content = " 3(초단위); url = 이동할 페이지, 사이트명
+  -->
+    <!--<meta http-equiv ="refresh" content ="3;url=http://www.daum.net">-->
+    <title>2.이미지,링크문자열.html</title>
+    <!--<style type="text/css">
+	body {font-size:14px; color:#552; font-weight:bold;}
+  </style>
+  <script type="text/javascript">
+  </script>
+  -->
+</head>
+
+<body>
+    <h3>이미지 불러오기</h3>
+    적절한 위치에 이미지 &lt;img&gt; 태그를 이용해서 불러오면 됩니다.<p>
+        <!--
+		1. src = source 의 약자 , 이미지를 불러올 경로 지정
+			-> 절대경로 => C:\webtest\1.client\images\fish.jpg  드라이브표시
+			-> 상대경로 => 현재폴더(.), 상위폴더(..)/images => 현재 파일 위치를 기준으로 경로를 불러오는 방법
+		2. width, height -> 불러올 이미지의 크기를 지정, 기본적으로 px 단위를 사용 (px => 모니터에 출력되는 점의 개수)
+		3. border  = "테두리(선의 굵기)" 0 (테두리 x)
+		4. alt => 그림에 대한 설명문 ( 브라우저의 종류, 태그의 존재유무)
+			=>html5 -> figure, figcaption (이미지와 연결 -> 제목을 출력)
+	-->
+        <figure>
+            <!-- 이미지, 영상들을 조합, 배열할 때 쓰는 태그 -->
+            <img src="../images/fish.jpg" width="324" height="227" border="0" alt="망둥이그림	">
+            <figcaption><mark>이미지에 대한 설명 글을 부여(망둥어)</mark></figcaption>
+        </figure>
+        <hr> <!-- line 긋기 (선의 속성은 html5에서는 사용하지 않는다)-->
+        <figure>
+            <img src="../images/waiting.jpg"><br>
+            <img src="../images/Penguins.jpg" width="362px" height="474px">
+        </figure>
+        <hr>
+        <!-- 
+		링크(a) href = "이동하는 페이지 또는 사이즈 주소" target="_blank"(새창) / (브라우저탭이 추가)
+							#키워드(main)(상단메뉴)
+							<div id="main></div>    id의 위치로 이동
+							mailto : 실제 메일 주소
+	-->
+        <a href="http://www.naver.com">네이버</a>
+        <a href="http://www.daum.net" target="_blank">다음</a><br>
+        <a href="#top">문서 내부에서의 특정 위치로 이동</a>
+        <hr>
+        공부하시다가 문의가 있으시면 <a href="mailto:nup49rok2@naver.com"> 저한테 메일</a> 보내주세요
+</body></html>
