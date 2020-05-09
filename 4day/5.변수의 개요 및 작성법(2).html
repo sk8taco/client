@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.변수의 개요 및 작성법(2).html</title>
+    </head>
+    <style type="text/css">
+        
+    </style>
+    <script type="text/javascript">
+        //형식) var 변수명(명사형) = 저장할 값
+        //자료형 (=데이터형)->컴퓨터에게 문자,숫자인지 알려주고 자료의 크기를 지정
+        //예약어 -> 미리 컴퓨터 언어가 정해놓고 사용하는 단어
+        var age=32; // 변수 선언 (공간을 만들어주는 것)
+        var name="박종혁";
+        
+        var birth=0;
+        
+        var date_today = new Date();
+       
+        
+        /*name = prompt("이름을 입력하세요","박종혁");
+        birth = prompt("생년을 입력하세요","1980");
+        age = date_today.getFullYear()-birth+1;
+        if(birth==0){
+            alert("생년을 꼭 입력해주세요");
+        }
+        */      
+        document.write("제 이름은 " + name + " 입니다.<br>");        
+        document.write("제 나이는 "+age+ " 입니다.<p>");
+        
+        //alert("당신의 나이는"+age+"입니다.");
+    </script>
+    <body>
+        <ol>변수의 개요 및 특징
+            <li>입출력 프로그램을 작성(입력을 받아서 출력해주는 프로그램)</li>
+            <li>변수 -> 사용자로부터 값을 입력(문자,숫자,논리값)받아서 저장하는 공간</li>
+            <li>변수명을 줄때 대/소문자를 구분한다</li>
+            <li>var 변수명(단어) = 저장할  값</li>
+            <li>변수의 값은 중간에 값이 변경되면 변경된 값이 덮어씌워진다.</li>
+            <li>자바스크립트의 자료형은 저장되는 값에 따라서 자동으로 저장이 된다.</li>
+            <li>변수를 작성->영문+숫자+특수기호를 조합하여 작성(숫자로 시작할 수 없다)</li>
+        </ol>
+    </body>
+</html>

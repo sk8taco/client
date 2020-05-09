@@ -1,0 +1,32 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>6.태그의 내용을 변경(6).html</title>
+  
+  <script type="text/javascript">
+      function change(){
+        //같은 태그를 구분하는 인자 : id값
+        //id가 test인 div태그의 정보를 가져와라
+        //형식)document.getElementById("id명")
+        var ch = document.getElementById("test2");
+        //alert(ch); //   [object htmlDivElement]
+        //형식2)태그정보.innerHTML(속성명)="변경할 값"
+        ch.innerHTML = "화면상에 동적으로 변경되었습니다.";
+      }
+      function refresh(){
+        window.location.reload();
+      }
+      
+  </script>
+ </head>
+ <body>
+     <div id="test">자바스크립트의 변수,연산자,제어문(if),함수</div>
+     <div id="test2">DOM(동적디자인)의 개요 및 활용법(예습)</div>
+     <form name="f">
+         <!--<input type="button" value="변경" >-->
+         <button type="button" onclick="change()">변경</button>
+         <button type="button" onclick="refresh()">새로고침</button>
+     </form>
+ </body>
+</html>

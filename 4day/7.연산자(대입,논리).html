@@ -1,0 +1,68 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>7.연산자(대입,논리).html</title>
+  <!--
+      대입(=배정)연산자 -> +=,-=,*=,/=
+                      자기자신의 변수에 어떠한 값을 연산할때 사용하는 연산자 (재귀연산)
+                      ex) a = b+c
+                          a = a+2; -> a+=2(권장)
+                          a = a-2; -> a-=2
+                          a = a*2; -> a*=2
+                          a = a/2; -> a/=2
+                          
+                        -> 계산속도가 빨라진다. (연산자 사용이 1개로 줄어듦)    
+        
+      논리연산자 => 참과 거짓을 판별할 수 있는 연산자(true or false)
+              and(&&) 그리고
+              or(||) 또는
+              not (!) 부정
+              
+              T && T = T   T || T = T   !T = F
+              T && F = F   T || F = T
+              F && T = F   F || T = T
+              F && F = F   F || F = F
+              
+              
+  -->
+ </head>
+ <body>
+     <script type="text/javascript">
+         var a = 10;
+         function calcPrint(){                
+         
+         //a = a+2;
+         document.write("a=>"+a+"<br>");
+         a += 2;
+         document.write("a+=2>"+a+"<br>");
+         a -= 2;
+         document.write("a-=2>"+a+"<br>");
+         a *= 2;
+         document.write("a*=2>"+a+"<br>");
+         a /= 2;
+         document.write("a/=2>"+a+"<br>");
+         
+         document.write("========================<br>");
+         }
+         /*
+         함수를 사용하는 목적 -> 단순하고 반복적인 구문 => 중복배제, 소스코드를 절약 -> 개발시간 단축
+         
+         */
+         calcPrint();
+         calcPrint();
+         
+         
+         var su1 = (2>5) && (5<7);
+         
+         document.write("su1=>"+su1+"<br>");
+         
+         var su2 = (2>5) || (5<7);
+         document.write("su2=>"+su2+"<br>");
+         
+         document.write("!su2=>"+!su2+"<br>");
+         
+         
+     </script>
+ </body>
+</html>

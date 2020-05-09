@@ -1,0 +1,212 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>timber shop</title>
+        <!-- css 스타일 시트 링크 -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <!-- jqeury 링크 -->
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>        
+        <script src="js/jquery.tubular.1.0.1/"></script>
+        <script src="slick/slick.min.js"></script>
+        <script src="js/timber.js"></script>
+          
+    </head>
+    <body>
+       <!--  header 시작 -->
+        <header id="main_header">
+           <h1><!-- 상단 좌측 로고 -->
+               <a href="#"><img src="img/logo_2019_bk.jpg" alt=""></a>
+           </h1>
+           <nav id="main_menu"><!-- 상단메뉴 -->
+               <ul>
+                   <li>
+                       <a href="#">ABOUT US</a>
+                       <span class="menu_under"></span>
+                       <ul class="sub">
+                           <li><a href="#">WHO WE ARE</a></li>
+                           <li><a href="#">OUR LOCATIONS</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">ONLINE SHOP</a>                       
+                       <span class="menu_under"></span>
+                       <ul class="sub">
+                           <li><a href="http://www.kadenceshop.com" target="_blank">KadenceShop</a></li>
+                           <li><a href="#">BRANDS</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">TEAM</a>
+                       <span class="menu_under"></span>
+                       <ul class="sub">
+                           <li><a href="#">OUR CREW</a></li>
+                           <li><a class="recruit" href="#">CREW RECRUIT</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">MEDIA</a>
+                       <span class="menu_under"></span>
+                       <ul class="sub">
+                           <li><a href="#">PHOTO</a></li>
+                           <li><a href="#">VIDEO</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">TIMBER TV</a><span class="menu_under"></span></li>                   
+               </ul>
+                                
+           </nav>
+           <div class="menu_bg"> <!-- sub메뉴가 내려오면 전체 sub 메뉴가 내려오면서 배경도 같이 내려오도록 -->
+           </div>            
+           <div id="btn"><!-- 햄버거 메뉴 버튼 -->               
+               <a href="#"><img src="img/hamburger_button.jpg" alt="hamburger_button"></a>
+           </div>
+           <div class="bg"><!-- 메뉴 버튼 클릭시 bg 색상으로 fix --></div>
+           <span><a class="cl_btn" href="#">X</a></span>
+           <div class="block_menu">
+               <ul>
+                   <li>
+                       <a href="#">ABOUT US</a>
+                       <ul class="bg_sub">
+                           <li><a href="#">WHO WE ARE</a></li>
+                           <li><a href="#">OUR LOCATIONS</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">ONLINE SHOP</a>                       
+                       <ul class="bg_sub">
+                           <li><a href="htttps://www.kadenceshop.com">KadenceShop</a></li>
+                           <li><a href="#">BRANDS</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">TEAM</a>
+                       <ul class="bg_sub">
+                           <li><a href="#">OUR CREW</a></li>
+                           <li><a href="#">CREW RECRUIT</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">MEDIA</a>
+                       <ul class="bg_sub">
+                           <li><a href="#">PHOTO</a></li>
+                           <li><a href="#">VIDEO</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#">TIMBER TV</a></li>                   
+               </ul>
+           </div>
+                      
+        </header>
+        <!-- section 시작 -->
+        <section id="wrap">
+            <div class="slide_container">
+                <span class="tit1">ABOUT TIMBER SHOP</span>
+                <span class="line"></span>
+                <span class="tit2">SEOUL CITY SKATEBOARD SUPPORTER</span>
+                <div class="slides">
+                    <div><img src="img/slider/2.jpg" alt="slide_image_01"></div>
+                    <div><img src="img/slider/3.jpg" alt="slide_image_02"></div>
+                    <div><img src="img/slider/6.jpg" alt="slide_image_03"></div>
+                    <div><img src="img/slider/7.jpg" alt="slide_image_04"></div>
+                    <div><img src="img/slider/9.jpg" alt="slide_image_05"></div>
+                    <div><img src="img/slider/10.jpg" alt="slide_image_06"></div>                 
+                </div>
+            </div>
+            <!--슬라이드 이미지 플러그인 세팅 -->
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slides').slick({
+                      slideToShow:1,
+                      slideToScroll:1,
+                      autoplay:true,
+                      autoplaySpeed:2500,
+                      pauseOnHover:false,
+                      PauseOnFocus:false    
+                });
+            });
+        </script>
+        
+            <div class="contents_container">
+                <div class="media_youtube">
+                    <div class="left_box">
+                    <span></span>
+                    <h2>MEDIA &amp; YOUTUBE</h2>
+                    <p>
+                        TIMBER의 활동과 소식 그리고<br>TIMBER TV를 한 눈에 확인해보세요.
+                    </p>    
+                    </div>
+                    
+                    <div class="right_box">
+                        <ul class="tg_button">
+                            <li id="media_btn"><a href="#none">Media</a></li>
+                            <li id="tv_btn"><a href="#none">    TimberTV</a></li>
+                        </ul>                    
+                        <article class="media_contents">
+                            <ul>
+                                <li>
+                                   <img src="img/media/1.jpg" alt="">
+                                   <span></span>
+                                </li>
+                                <li>
+                                   <img src="img/media/2-1.jpg" alt="">
+                                </li>
+                                <li>
+                                   <img src="img/media/10.jpg" alt="">
+                                </li>                                
+                            </ul>
+                        </article>
+                        <article class="tv_contents">                   <ul>
+                                <li>
+                                   <iframe src="https://www.youtube.com/embed/O6SlyusNeKk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>
+                                <li>
+                                    <iframe src="https://www.youtube.com/embed/y7CBl7VfNg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                 
+                                </li>
+                                <li>
+                                    <iframe src="https://www.youtube.com/embed/qEImwELdUes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </li>                                
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="about_timber">
+                   <h2>ABOUT TIMER</h2>
+                   <p>
+                       한국 SKATEBOARD 씬의 힙한 STORE<br>
+                       저희에 대해 보여드려요.
+                   </p>
+                   <span><a href="#">More View</a></span>
+                </div>
+                <div class="contact_container">
+                    <h2>Contact Us</h2>
+                    <div class="connect">
+                        <ul>
+                        <li><a href="#">twitter</a></li>
+                        <li><a href="https://www.facebook.com/timbershopkorea" target="_blank">facebook</a></li>
+                        <li><a href="https://www.instagram.com/timbershop/" target="_blank">instagram</a></li>
+                        <li><a href="#">rss</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact_bg">
+                        <ul>
+                            <li>서울특별시 마포구 동교로22길 30 1층</li>
+                            <li>DONGGYO-RO 22-GIL 30, MAPO-GU</li>
+                            <li>SEOUL, SOUTH KOREA</li>
+                            <li>월~일: 12PM ~ 9PM</li>
+                            <li>PHONE: 02 3144 2550</li>
+                            <li>EMAIL: info@timbershop.kr</li>
+                        </ul>
+                    </div>
+                    <div class="timber_tv">
+                        <a href="https://www.youtube.com/c/timbertv" target="_blank"><img src="img/banner_logo.png" alt="timber_tv_youtube"></a>
+                    </div>
+                </div>               
+            </div>
+        </section>
+        
+    </body>
+</html>

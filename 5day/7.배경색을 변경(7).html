@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>7.배경색을 변경(7).html</title>          
+        <script src="js/jquery-1.12.4.js"></script>  
+        <script type="text/javascript">
+            /*
+            (1)함수가 3개인데 하는 일이 같음. > 비효율적 -> 통합
+            function setRed(){
+                var bx = document.getElementById("box");
+                //alert(bx);
+                //태그정보.상위속성명.하위속송명=변경할색상(저장할값)                
+                bx.style.backgroundColor="#f00";
+                //$('#box').css('background','#00f');    
+            }
+                
+            function setGreen(){
+                var bx = document.getElementById("box");
+                bx.style.backgroundColor="#0f0";
+            }   
+            function setBlue(){
+                var bx = document.getElementById("box");
+                bx.style.backgroundColor="#00f";
+            }
+            function setClear(){
+                var bx = document.getElementById("box");
+                bx.style.backgroundColor="#fff";
+            }
+            */
+            function setColor(num){
+                var box = document.getElementById("box");
+                var color="#fff";
+                //if(n == 1) color="#f00" else if(n == 2) color="#0f0" else~
+                //다중if문과 같지만 속도가 더 빠름
+                switch(num){ //switch (조건식) -> 변수,수식
+                    case 1: // case 문자열 또는 숫자
+                        color="#f00";
+                        break;
+                    case 2:
+                        color="#0f0";
+                        break;
+                    case 3:
+                        color="#00f";
+                        break;
+                    default:
+                        color="#fff";
+                        break;
+                }
+                box.style.background=color;
+                                
+            }
+                    
+            
+        </script>
+        <style type="text/css">            
+            #box {
+                margin:30px;
+                width:200px;
+                height:200px;
+                background:#fff;
+                border:2px solid #000;
+            }
+            #box2{
+                margin:30px;
+                width:200px;
+                height:200px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!--
+        (1)
+        <input type="button" value="Red" onclick="setColor()">
+        <input type="button" value="Green" onclick="setGreen()">
+        <input type="button" value="Blue" onclick="setBlue()">
+        -->
+        <input type="button" value="Red" onclick="setColor(1)">
+        <input type="button" value="Green" onclick="setColor(2)">
+        <input type="button" value="Blue" onclick="setColor(3)">
+        <input type="button" value="Clear" onclick="setColor()">
+        
+        <!--<button type="button" onclick="setRed()">Red</button>
+        <button type="button" onclick="setGreen()">Green</button>
+        <button type="button" onclick="setBlue()">Blue</button>
+        <button type="button" onclick="setClear()">Clear</button>-->
+        <div id="box"></div>
+        <div id="box2"></div>
+        
+    </body>
+</html>

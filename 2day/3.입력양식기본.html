@@ -1,0 +1,64 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>3.입력양식기본.html</title>
+ </head>
+ <body>
+     <h3>웹프로그래밍을 하기위한 입력양식</h3>
+     <!--
+         form tag -> 외부에서 값으 입력을 받아서 전송할 때 사용하는 태그 (DB)
+                 method 속성 - > 데이터 전송 방식 
+                            1)get -> 사이트접속, 검색 (default) -> url창에 정보가 노출되면서 전달
+                            2)post -> 회원가입, 로그인, 파일첨부메일 -> url창에 노출X (보안)
+                            3)action -> 누구에게 전달해 줄 것인가에 대한 속성
+                              name = "영어"로 각각의 입력받은 값을 구분 => 변수
+     -->
+     <form method="post" action="register.jsp">
+        이름 <input type ="text" size ="10" name="name" ><br>
+        ID <input type="text" size="10" name="id"><br>
+        패스 <input type ="password" size ="8" name="pwd"><br>
+        메일 <input type ="text" size="15" name="email"> &nbsp; &#64; &nbsp; <select name="email_corp">
+         <option value="naver.com" selected>naver.com</option>
+         <option value="daum.net">daum.net</option>
+        </select>
+        <br>
+        <!--
+            성별(둘중의 하나 값만 선택) radio             
+        -->
+        <input type="radio" name="gender">남자
+        <input type="radio" name="gender" checked="checked">여자
+        <p>
+            <!-- 다중선택(동시에 여러개를 선택) checkbox -->
+            취미 : <input type="checkbox" name="chk"> 바둑
+                  <input type="checkbox" name="music"> 음악감상
+                  <input type="checkbox" name="sk8"> 스케이트보드
+        </p>
+        <!-- 정해져있는 값 중에서 하나를 선택(select태그)-->
+        취업희망 : <select size="1" name="job">
+            <option value="web-programmer">웹프로그래머</option>
+            <option value="big-data" selected>빅데이터(파이썬)</option>
+            <option value="db-pro">DB전문가</option>
+            <option value="secure-pro">보안전문가</option>
+        </select>
+        <br>
+        
+        <!-- 여러줄을 입력받는 경우(textarea) -->
+        경력사항 : <textarea name="career" rows="8" cols="40" ></textarea>
+        
+        <p>
+        <!-- 파일첨부 -->
+        <input type="file" name="file">
+        </p>
+        <!-- 버튼(일반, 전송(자동적으로 전송 action="register.jsp)) -->
+        <input type="button" name="submit" value="전송" onclick=""> <!-- 수동으로 목적지 지정 -->
+        <input type="submit" name="submit" value="전송" onclick=""> <!-- 자동으로 action의 위치로 전송 -->
+        <input type="reset" name="reset" value="리셋" onclick="">
+        <button name="cancle">취소</button>
+        
+        
+         
+     </form>
+  
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>7.DOM의 개요(7).html</title>
+  <script type="text/javascript">
+      /*
+      DOM - Documnet Object 
+        정적디자인 -> html5, css3
+        동적디자인 -> 자바스크립트언어로써 디자인을 할 수 있다.
+        브라우저 상태에서 어떤 기능에 다른 디자인 변경
+      */
+      /*
+        DOM(Document Object Model) - html문서나 xml문서를 읽어들여서 그 문서의 구조대로 메모리(Ram)에 태그 정보를 만들어 관리해주는 API(환경)
+        => 동적인 화면 디자인을 할 때 사용
+      */
+      function test(){
+          var spans = document.getElementsByTagName("span"); // 태그 이름으로 가져옴
+          // alert(spans); [HTMLCollection] => 여러개의 태그를 의미
+          //alert(spans[1].innerHTML);
+          spans[1].innerHTML = "DOM연습중";
+          spans[2].innerHTML = "span태그의 정보 가져오기";
+          
+          
+      }
+        </script>
+ </head>
+ <body onload ="test()">     
+     <span>연습1</span> <!-- 동일 태그 반복 -> 배열 -->
+     <span>연습2</span>
+     <span>연습3</span>
+ </body>
+</html>

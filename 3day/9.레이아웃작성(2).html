@@ -1,0 +1,93 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>9.레이아웃작성(2).html</title>
+  <style type="text/css">      
+      #container {
+          width:940px;          
+          border:1px solid #bcbcbc;
+          margin:0px auto;          
+          padding:20px;
+      }
+      #header{
+          border:1px solid #bcbcbc;
+          padding:40px; 
+          margin-bottom:20px;
+      }
+      #content {
+          /*
+              content(580px), sidebar(260px)
+              본문내용의 배치시키는 방법 (순서)
+              div 태그로 설정된 영역들을 배치할 때 사용하는 속성
+              : float -> left, right. 
+          */
+          width:580px;
+          border:1px solid #bcbcbc;
+          float:left;
+          margin-bottom:20px;
+          padding:20px;
+      }
+      
+      /*#content > p {
+          margin:0px;
+          padding:0px;
+          word-break:break-all;
+          
+      }*/
+      #sidebar{
+          width:260px;
+          border:1px solid #bcbcbc;
+          float:right;
+          margin-bottom:20px;
+          padding:20px;
+      }
+      #footer{
+          /*
+          footer부분이 본문내용 바로 뒤에 배치되지 않고, 우측 상단에 배치된 이유 : 직전의 float 속성
+          -> 해당 float 설정값을 해제 -> clear 속성 사용 (clear: left, right, both)
+          */
+          /*clear:both;*/
+          
+          border:1px solid #bcbcbc;
+          padding:20px;
+      }
+      
+      .clearfix{
+          clear:both;
+      }
+  </style>
+ </head>
+ <body>
+     <div id="container">
+        <!-- 문서의 전체 테두리(container) -->
+        <div id="header">
+           <!-- 머리말 -->
+            <h2>2-Column Layout</h2>
+        </div>
+        <!-- 본문(content) -->
+        <div id="content">
+           <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu bibendum ex. Ut ex arcu, dapibus a sodales sed, luctus posuere eros. Sed aliquam enim sed sollicitudin efficitur. Maecenas euismod ullamcorper purus et ornare. Donec ac consectetur lorem. Praesent vel egestas ipsum. Praesent et tellus venenatis, ultrices dui et, tempor tellus. Quisque non hendrerit ligula. Donec sodales nibh porta velit tempor congue. Nunc feugiat, justo vel laoreet laoreet, magna urna molestie dolor, sed sollicitudin est nulla et urna. Sed vehicula imperdiet aliquam. Duis nec condimentum ante, nec maximus nibh.
+           </p>
+           <p>
+              Pellentesque non placerat lorem. Integer porttitor ex et dapibus congue. Integer aliquam nulla at turpis tincidunt congue. Morbi tempus eros quis turpis viverra tempus. Fusce pulvinar sapien in enim aliquet, ac vestibulum dui sagittis. Ut posuere tellus nec nisi laoreet, in auctor purus hendrerit. Vestibulum scelerisque neque non aliquam scelerisque. Mauris non nisi nec lacus blandit vestibulum id a nunc. Morbi justo ante, hendrerit in dui tincidunt, dignissim semper eros. Nullam non arcu vitae velit cursus condimentum a sed ex. 
+           </p>
+            
+        </div>
+        <!-- 사이드바 -->
+        <div id="sidebar">
+            <h2>SideBar</h2>
+            <ul>
+                <li>HTML, HTML5</li>
+                <li>CSS, CSS의 속성</li>
+                <li>CSS의 layout 속성</li>
+            </ul>
+        </div>
+        <!-- 꼬리말(footer) -->
+        <div id="footer" class="clearfix">
+            <p> Copyright&#64;all rihgt reserved sk8taco</p>    
+        </div>
+     </div>  
+ </body>
+</html>

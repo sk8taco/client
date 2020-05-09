@@ -1,0 +1,47 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+      /*
+        margin(밖의 여백), padding(안쪽 여백)      
+      */
+      ul {
+          background:#0a1;
+          margin:10px 20px 30px 40px;
+          /* top right bottom left 순서 */
+          /*
+          margin-top:10px;
+          margin-right:20px;
+          margin-bottom:30px;
+          margin-left:40px;                    
+          */
+          
+          padding:50px 60px 70px 90px;
+      }
+      
+      li {
+          background:#f00;          
+          list-style:none; /* 리스트 항목의 마커를 설정하는 속성 */
+          margin:30px; /*li태그의 바깥쪽 여백(ul태그 안쪽여백->ul태그의 padding영역에 30px씩 더한 효과)*/
+          padding:30px; /*li태그의 안쪽 여백 -> 글자와의 거리*/
+      }
+      li.width_border {
+          /*
+              border(상위속성) border-하위속성명
+          */
+          /*border:dotted medium yellow;*/
+          border-style:double; /* solid, dotted, double~*/
+          border-width:thick; /*medium, thick, thin*/
+          border-color:#fbb;          
+      }
+  </style>
+ </head>
+ <body>
+     <ul>
+         <li>테두리가 없는 경우</li>
+         <li class="width_border">테두리가 있는 경우</li>         
+     </ul>     
+ </body>
+</html>

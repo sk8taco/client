@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>과제1</title>
+  <style type="text/css">
+      body{
+          text-align:center;
+      }
+      
+      form > input {
+          width:80px;
+          height:30px;          
+      }
+  </style>
+  <script type="text/javascript">
+      
+      /*
+      function toggle(){
+        /*        
+        var tg_btn = document.getElementById("btn");        
+        if(tg_btn.value == "네이버"){
+            tg_btn.value = "다음";        
+        }else{
+            tg_btn.value = "네이버";
+        }
+        }
+      
+      
+        var btn_val = document.f.b_name.value;          
+        var val = document.getElementById("btn");
+        if(btn_val == "네이버"){         
+            val.value="다음";          
+        } else {
+            val.value="네이버";
+        }
+      }
+      */
+      //풀이과정
+      function toggle(){
+          //alert("toggle()");
+          //누른 버튼의 이름 구하기 -> document.폼이름.버튼이름(입력양식).속성
+          
+          //var b_val = document.f.b_name.value;
+          //alert(b_val);
+          /*
+          (1)
+          if(b_val == "네이버"){
+              document.f.b_name.value="다음";   
+          } else{
+              document.f.b_name.value="네이버";
+          }
+          */
+          
+          /*
+          (2)
+          삼항연산자 -> if문 대용
+          ->형식) 변수명=(조건식)? 수행1(참) : 수행2(거짓)
+          */
+          var b_val = document.getElementById("btn").value;
+          var text = (b_val =="네이버")? "다음" : "네이버";
+          document.f.b_name.value = text;
+          
+      }
+      
+        
+  </script>
+ </head>
+ <body>
+     <h1>버튼을 눌러주세요!</h1>
+     <form name="f">
+         <input type="button" value="네이버" name="b_name" id="btn" onclick="toggle()">
+         <input type="button" value="버튼연습" namme="b_button" id="b_button">
+     </form>
+ </body>
+</html>

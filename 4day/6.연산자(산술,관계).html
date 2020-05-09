@@ -1,0 +1,58 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>6.연산자(산술,관계).html</title>
+  <script type="text/javascript">
+      /*
+        연산자(operator) => 연산(계산)을 하기 위한 기호
+        
+        1. 산술연산자 -> + - * / % 
+                        3 + 5 = 8 이항산술연산자
+                        +5, -2단항
+                        ++, -- 증감연산자
+        2. 관계연산자(=비교연산자) > >= < <= ==, !=
+      */
+  </script>
+ </head>
+ <body>
+     <script type="text/javascript">
+         document.write("산술,관계연산자<br>");         
+         var res = 20 + 30;
+         document.write("res=>"+res+"<br>");
+         //-
+         res = 20-30;
+         document.write("res=>"+res+"<br>");
+         //*
+         res = 20*30;
+         document.write("res=>"+res+"<br>");         
+         // /
+         res = 20/ 30;
+         document.write("res=>"+res+"<br>");
+         // %
+         res = 20%30;
+         document.write("res=>"+res+"<br>");
+         document.write("================<br>");
+         //변수를 선언 it is => it's
+         //형식) 여러개의 변수를 한꺼번에 선언해서 작성
+         // ex) var 변수명 = 값, 변수명2=값, 변수명3=값;
+         /*
+            "10"(문자열상수)
+             10 (숫자)
+         */
+         var a = 10, b = 5;
+         var c = a>b; // 10>5;
+         document.write("a>b=>"+c+"<br>");
+         c = a == b;
+         document.write("a==b=>"+c+"<br>");
+         c = a!=b;
+         document.write("a!=b=>"+c+"<p>");
+     </script>
+     <ol>
+        <h3 style="margin:0; text-indent:-25px;">변수를 사용해야 하는 경우</h3>
+         <li>입축력 프로그램을 작성할 필요가 있을 때</li>
+         <li>계산할 때->피연산자들을 저장</li>
+         <li>현재 프로그램의 상태를 기억시킬 필요가 있을 때<br>ex)그림판에서 마우스 좌측버튼의 클릭 유무 => 논리값 boolean 값 <br> &nbsp; &nbsp; var mouseclick = false;<br>&nbsp; &nbsp; if(mouseclick==ture)<br>&nbsp; &nbsp;&nbsp; &nbsp;  {draw} </li>
+     </ol>
+ </body>
+</html>

@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>이력서</title>
+        <link rel="stylesheet" type="text/css" href="resume.css">                   
+        
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <section>
+            <form method="post" action="application.jsp">
+                <table class="entire">                       
+                    <thead>                        
+                        <th colspan="4">RESUME</th>
+                    </thead>
+                    <tbody>
+                       <tr>
+                           <td>지원분야</td>
+                           <td>
+                               <input type="text" name="application_field" id="appliction_field">
+                           </td>
+                           <td>희망연봉</td>
+                           <td >
+                               <input type="number" name="salary" id="salary" value="10000">만원
+                           </td> 
+                       </tr>
+                       <tr>
+                           <td rowspan="5">
+                               <input type="file" name="photo" id="photo">                         
+                           </td>
+                           <td>이름</td>
+                           <td colspan="3"><input type="text" name="name" id="name"></td>                          
+                       </tr>
+                       <tr>
+                           <td>주민등록번호</td>
+                           <td colspan="3"><input type="number" name="ssn" id="ssn"></td>                           
+                       </tr>
+                       <tr>
+                           <td>핸드폰</td>
+                           <td colspan="3">000-0000-0000</td>                           
+                       </tr>
+                       <tr>
+                           <td>주소</td>
+                           <td colspan="3">서울시 도봉구 해등로 118 1-502</td>                           
+                       </tr>
+                       <tr>
+                           <td>이메일</td>
+                           <td colspan="2">
+                              <input type="email" name="email" id="email" placeholder="이메일ID">&#64;
+                              <input type="text" id="mail_select" list="mail_corp" placeholder="---선택하세요---">
+                              <datalist id="mail_corp">
+                                  <option value="naver.com"></option>
+                                  <option value="daum.net"></option>
+                                  <option value="nate.com"></option>
+                              </datalist>
+                           </td>                           
+                       </tr>
+                       <tr>
+                           <table class="univ">
+                               <tr>
+                                   <th colspan="4">학력사항</th>
+                               </tr>
+                               <tr>
+                                   <td>재학기간</td>
+                           <td>학력사항</td>
+                           <td>전공</td>
+                           <td>학점</td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <input type="text" >
+                                   </td>
+                                   <td><input type="text" ></td>
+                                   <td><input type="text" ></td>
+                                   <td><input type="text" ></td>
+                               </tr>
+                               
+                           </table>
+                       </tr>
+                       <!--<tr>
+                           <td rowspan="4">학력사항</td>                                                     
+                       </tr>
+                       <tr>
+                           <td>재학기간</td>
+                           <td>학력사항</td>
+                           <td>전공</td>
+                           <td>학점</td>
+                       </tr>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                       </tr>
+                       <tr>
+                           <td rowspan="4">주요활동 및 사회경험</td>  
+                       </tr>
+                       <tr>
+                           <td>기간</td>
+                           <td>구분</td>
+                           <td rowspan="2">기관 및 장소</td>                           
+                       </tr>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td rowspan="2">&nbsp;</td>                           
+                       </tr>
+                       <tr>
+                           <td rowspan="4">참여 프로젝트</td>                           
+                       </tr>
+                       <tr>
+                           <td>프로젝트 기간</td>
+                           <td rowspan="3">프로젝트명</td>                           
+                       </tr>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td rowspan="3">&nbsp;</td>                           
+                       </tr>
+                       <tr>
+                           <td rowspan="4">해외연수 및 해외경험</td>
+                       </tr>
+                       <tr>
+                           <td>기간</td>
+                           <td>국가명</td>
+                           <td>연수기관(학교) 및 단체</td>
+                           <td>목적</td>
+                       </tr>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                       </tr>
+                       <tr>
+                           <td rowspan="2">
+                               <table>
+                                   <tr>
+                                       <th rowspan="2">OA능력</th>
+                                   </tr>
+                               </table>
+                           </td>
+                           <td rowspan="2">어학능력</td>
+                       </tr>
+                       <tr>
+                           <td>문서작성</td>
+                           <td>스프레드시트</td>
+                           <td>언어</td>
+                           <td>회화능력</td>
+                       </tr>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                       </tr>
+                       <tr>
+                           <td>프레젠테이션</td>
+                           <td>인터넷(정보검색)</td>
+                           <td>작문능력</td>
+                           <td>독해능력</td>
+                       </tr>
+                       <tr>
+                           <td rowspan="4">교육이수</td>
+                       </tr>
+                       <tr>
+                           <td>기간</td>
+                           <td>교육명</td>
+                           <td rowspan="2">교육기관명</td>                           
+                       </tr>
+                       <tr>
+                           <td>&nbsp;</td>
+                           <td>&nbsp;</td>
+                           <td rowspan="2">&nbsp;</td>                           
+                       </tr>
+                       <tr>
+                           <td rowspan="4">
+                               <button type="submit">제출</button>
+                               <button type="reset">다시쓰기</button>
+                           </td>
+                       </tr>-->
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>

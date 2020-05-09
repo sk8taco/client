@@ -1,0 +1,90 @@
+
+body,section,div,p,form,fieldset,legend,table,caption,input {
+    margin: 0px;
+    padding: 0px;
+}
+
+fieldset {
+    border: 0px;
+}
+
+legend {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+/* table 들 겹치기 */
+
+/* layout */
+body {
+    font-size: 12px;
+    font-family: "맑은 고딕", "굴림", sans-serif;
+}
+
+#join_crew
+
+/* section */
+    {
+    width: 710px;
+    margin: 40px auto;
+}
+
+/* (100% 미만으로)넓이를 주지 않으면 margin auto를 줄수 없음 */
+.p1 {
+    text-align: right;
+    margin-bottom: 6px;
+}
+
+caption {
+    text-indent: -9999em;
+}
+/* indent를 사용하면 "글자"가 존재하기 떄문에 글자 높이만큼의 간격이 존재 하므로 상위에서 margin-bottom을 줄 필요가 없다. */
+table {
+    width: 710px;
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+    margin: 0 auto;
+}
+
+th,
+td {
+    border-bottom: 1px solid #555;
+    padding: 8px 12px;
+}
+
+th {
+    background: #ededed;
+    width: 300px;
+    text-align: left;
+    border-right: 1px solid #555;
+}
+
+table p {
+    margin: 7px 0px;
+}
+
+#addr1,
+#addr2 {
+    width: 550px;
+    background: #fff;
+}
+
+input:not([type="radio"]),
+select {
+    /* type 속성이 radio가 아닌 input 개체들 선택 */
+    border: 1px solid #ccc;
+}
+
+input[type=radio] {
+    position: relative;
+    top: 3px;
+}
+
+#btns {
+    margin-top: 10px;
+    text-align: center;
+}

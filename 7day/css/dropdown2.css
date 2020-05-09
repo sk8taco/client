@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+li {
+    list-style: none;
+    /*마크삭제*/
+}
+
+a {
+    text-decoration: none;
+    /*링크 밑줄 제거*/
+}
+
+/*1레벨 메뉴*/
+.main_menu > li {
+    float: left;
+    /*왼쪽정렬*/
+    position: relative;
+    /* 각 li가 자신의 위치를 기준으로 다음 li를 오른쪽에 배치 시키기 위해서*/
+    width: 25%;
+    /*4개의 상단메뉴를 100%를 기준으로해서 배치*/
+    background: #67b0d1;
+
+}
+
+.main_menu > li > a {
+    /*상단메뉴의 링크*/
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.main_menu > li:hover {
+    background: #30f;
+}
+
+/*2레벨 메뉴 (3단계 포함)*/
+.main_menu ul {
+    position: absolute;
+    /*document (0,0) 좌측상단 기준*/
+    top: -9999px;
+    /*위쪽으로 감추기*/
+    z-index: 9999;
+    /*서브메뉴와 다른 영역이 겹칠때 맨앞으로 보낼 수 있도록*/
+    width: 140px;
+    border: 1px solid #ccc;
+
+}
+
+/*상단메뉴에 마우스를 올렸을때 하위메뉴 display */
+.main_menu > li:hover > ul {
+    left: 0px;
+    top: 60px;
+    /*상단메뉴의 높이 60px 밑으로*/
+}
+
+
+/*2단계 레벨 메뉴의 위치속성, 텍스트크기, 여백*/
+.main_menu ul li {
+    /* 최상위 ul태그 밑의 모든 ul 및 li */
+    position: relative;
+}
+
+.main_menu ul a {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 40px;
+    background: #fff;
+    padding-left: 20px;
+    /*border와 서브메뉴 사이의 거리*/
+}
+
+/* 2단계 레벨 메뉴에 색상 */
+.main_menu ul a:hover {
+    color: #fff;
+    background: #67b0d1;
+}
+
+/*2단계 메뉴항목을 마우스로 갖다 댔을때 li태그 밑에 ul태그 설정*/
+.main_menu ul li:hover > ul {
+    position: absolute;
+    top: 0px;
+    left: 100%;
+}

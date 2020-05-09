@@ -1,0 +1,561 @@
+/* 100% 화면을 써야하는 웹페이지 디자인이 특징 */
+/* web-font, spoqa-han-sans 적용"*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+*{ /*기본적으로 모든 태그에 대해 마진값과 패딩값을 0으로 초기화*/
+    margin:0px;
+    padding:0px;    
+}
+
+body{
+    font-family:'Spoqa Han Sans', 'Sans-seirf';
+    overflow-x:hidden;
+}
+ul,li { /* 리스트의 mark를 지워줌 */
+    list-style:none;    
+}
+a { /* 링크속성인 a 태그에 밑줄과 폰트색상을 없앰 */
+    text-decoration:none;
+    color:#333;
+}
+/*~~~~~~~~~~~~~~~~~~~header_logo~~~~~~~~~~~~~~~~~~~~~~~~*/
+#main_header{
+    width:100%;
+    height:100px;        
+}
+#main_header > h1{
+    width:14%; /*로고의 가로 길이 퍼센테이지로 설정*/
+    height:30%; /*로고의 세로 길이 퍼센테이지로 설정*/ 
+    background:#fff;
+    float:left;
+    margin-top:2%;    
+}
+#main_header > h1 > a > img{
+    width:95%;
+    height:95%;
+    padding-left:10px;
+}
+/*~~~~~~~~~~~~~~~~~~~navigation~~~~~~~~~~~~~~~~~~~~~~~~*/
+#main_menu{
+    width:70%; /*메인헤더 100% 중 70%를 메뉴에 할당*/
+    height:100px;
+    background:#fff;
+    float:left;        
+}
+#main_menu > ul {
+    position:relative; /*하단 메뉴의 position:absolute를 주기위한 기준 값으로 ul을 relative로 설정*/
+}
+
+#main_menu > ul > li {
+    float:left;
+    width:20%;
+    height:100px;    
+    text-align:center;        
+    position:relative;
+}
+#main_menu > ul > li > a{
+    display:block;
+    color:#333;
+    font-size:20px;
+    font-weight:bold;
+    margin-right:20px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    line-height:100px;    
+    word-break:break-all;
+    margin:0px;    
+}
+#main_menu > ul > li span{
+    display:none;
+    width:100%;
+    height:3%;
+    background:#f00;
+    position:absolute;
+    z-index:99; /*메뉴에 마우스를 올리면 진행되는 bar 모션을 위로 올림*/
+    top:97%;
+    left:0;
+}
+#main_menu .sub{    
+    width:100%;
+    height:100%;
+    position:absolute; /*상단 메인 메뉴를 (0,0) 기준으로 잡고 absolute 설정*/
+    z-index:105; /*slide에 가리지 않도록 z-index를 높여줌*/    
+    top:100%;
+    left:0;
+    display:none;
+}
+#main_menu .sub li{    
+    background:#fff; 
+    width:100%;
+    height:40px;
+    /*padding:5px;*/
+}
+#main_menu .sub li a {
+    display:block;
+    width:100%;    
+    font-size:15px;
+    line-height:40px;
+    margin:5px;
+    color:#333;    
+}
+#main_menu .sub li:hover a {
+    text-decoration:underline #f00;
+    color:#f00;
+    transition:all 0.5s;
+}
+.menu_bg{
+    position:absolute;
+    z-index:98;
+    top:100px;
+    width:100%;
+    height:100px;
+    background:#fff;
+    /*padding-bottom:15px;*/
+    display:none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~hamburger_menu_button~~~~~~~~~~~~~~~~~~~~~~~~*/
+#btn{
+    width:15%;
+    height:100px;
+    background:#fff;
+    float:right;
+    position:relative;
+}
+#btn img{
+    position:absolute;
+    top:50%;    
+    left:20%;
+    transform:translateY(-50%);
+    /*transform:translate(-50%,-50%);*/
+    width:10%;
+    height:20%;    
+}
+.bg{ /*전체화면을 가리는 bg*/
+    position:fixed;
+    z-index:997;
+    width:100%;
+    height:100%;
+    background:#159494;
+    display:none;
+}
+.bg.on{
+    display:block;
+}
+
+.cl_btn{ /*햄버거 메뉴 버튼을 닫는 X 버튼 */
+    display:none;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    position:fixed;
+    z-index:999;
+    top:20%;
+    left:50%;
+    transform:translateX:-50%;
+    color:rgba(255,255,255,0.5);
+    font-size:30px;
+    text-align:center;
+    padding:10px;
+    border:2px solid rgba(255,255,255,0.5);
+    border-radius:50px;
+    transition:all 1s;
+    
+}
+.cl_btn.on{
+    display:block;
+}
+
+.block_menu{
+    position:fixed;
+    z-index:998;
+    width:100%;
+    height:100%;
+    display:none;
+}
+.block_menu > ul{
+    width:80%;
+    height:30%;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);    
+}
+.block_menu > ul > li {
+    float:left;
+    width:20%;
+    height:50%;
+}
+.block_menu > ul > li > a{
+    display:block;
+    font-size:24px;
+    line-height:24px;
+    text-align:center;
+    color:rgba(255,255,255,0.5);
+    transition:all 1s;
+}
+.block_menu > ul > li:hover > a{
+    text-decoration:underline;
+}
+.block_menu .bg_sub{
+    margin-top:40px;
+}
+.block_menu .bg_sub > li{
+    width:100%;
+    height:40px;
+}
+.block_menu .bg_sub > li > a{
+    display:block;
+    font-size:18px;
+    line-height:40px;
+    text-align:center;
+    color:rgba(255,255,255,0.5);
+    transition:all 1s;
+}
+.block_menu .bg_sub > li:hover > a{
+    font-weight:bold;
+    text-decoration:underline;
+}
+.block_menu.on{
+    display:block;
+}
+/*~~~~~~~~~~~~~~~~~~~wrap_contents~~~~~~~~~~~~~~~~~~~~~~~~*/
+#wrap{
+    width:100%;
+    position:relative;
+}
+
+#wrap > .slide_container{ /*main slide가 돌아갈 영역*/
+    width:100%;
+    height:900px;
+    overflow:hidden;
+    position:relative;
+    z-index:5; 
+}
+#wrap > .slide_container span{
+    position:absolute;    
+    z-index:10;
+    font-weight:bold;
+    /*display:none;    */
+}
+#wrap > .slide_container span:nth-child(1){
+    font-size:30px;
+    color:#ff0d74;    
+    text-shadow: 10px 10px 3px #111;    
+    top:80%;
+    left:20%;
+    transform:translate(-50%, -50%);
+    display:none;
+}
+#wrap > .slide_container span:nth-child(2){
+    width:0;
+    height:2px;
+    background:linear-gradient(90deg,#ff0d74, #fff);
+    text-shadow: 10px 10px 3px #111;    
+    top:60%;
+    left:20%;
+    transform:translateX(-15%);
+}
+#wrap > .slide_container span:nth-child(3){
+    font-size:43px;
+    color:#fff;    
+    text-shadow: 10px 10px 3px #111;    
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:none;
+}
+
+#wrap > .slide_container > .slides{
+    width:100%;
+    height:100%;    
+    overflow:hidden;
+    position:absolute;
+    z-index:5;
+}
+#wrap > .slide_container > .slides img{    
+  /*
+    이미지가 가운데에 오도록 position 및 translate 설정
+     Slick 플러그인으로 인해 불필요
+  */
+    /*  width:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%); 
+  */
+}
+
+/*~~~~~~~~~~~~~~~~~~~slide 이외의 컨텐츠가 들어갈 영역~~~~~~~~~~~~~~~~~~~~~~~~*/
+#wrap > .contents_container{
+    width:100%;
+    height:50%;
+    position:relative;
+}
+/*~~~~~~~~~~~~~~~~~~~media & youtube~~~~~~~~~~~~~~~~~~~~~~~~*/
+.media_youtube{
+    position:relative;
+    width:100%;
+    height:85%;
+    background:#eee;
+    padding-bottom:2%;
+}
+.media_youtube > .left_box{
+    width:35%;
+    height:90%;
+    float:left;
+    margin:2% 0;
+}
+.media_youtube > .left_box > span{
+    display:block;
+    width:5%;
+    text-align:left;    
+    border:1px solid #159994;
+    position:absolute;
+    left:8%;
+}
+.media_youtube > .left_box > h2{
+    color:#159494;
+    width:50%;
+    height:10%;
+    margin:4% auto;
+    text-align:left;
+    line-height:40px;    
+}
+.media_youtube .left_box > p{
+    text-align:left;
+    line-height:30px;
+    font-size:20px;
+    margin:0 auto;
+    width:70%;
+}
+.media_youtube .right_box{
+    width:60%;
+    height:90%;    
+    float:right;
+    margin:2% 0;
+    position:relative;
+    background:#bebdbd;
+}
+.tg_button{
+    margin:10px 0 0 20px;
+}
+.media_youtube .right_box .tg_button > li{
+    width:14%;
+    height:40px;
+    float:left;
+    background:#159494;    
+    margin:15px;
+}
+#media_btn{
+    margin-right:0px;
+}
+
+.tg_button > li:hover a{
+    background:#ff0d74;
+    transition:0.4s;
+}
+.tg_button > li > a{
+    display:block;
+    width:100%;
+    height:100%;
+    line-height:40px;
+    text-align:center;
+    font-size:22px;  
+    font-weight:bold;
+    color:#fff;    
+}
+.right_box .media_contents {
+    width:100%;
+    height:50%;
+    position:absolute;
+    top:30%;
+    left:8%;
+}
+.media_contents.on{ /* 미디어 컨텐츠 버튼을 눌럿을 때, addClass*/
+    display:block;
+}
+.media_contents.off{/* 유튜브 버튼을 눌렀을 때, addClass*/
+    display:none;
+}
+.media_contents > ul > li {
+    width:30%;
+    height:100%;
+    float:left;    
+    overflow:hidden;
+    position:relative;
+}
+.media_contents > ul > li > img{
+    width:90%;    
+    position:absolute;
+    top:-30%;    
+}
+.media_contents > ul > li > img:last-child{
+    top:0px;
+}
+.right_box .tv_contents { 
+    width:100%;
+    height:50%;
+    position:absolute;
+    top:30%;
+    left:8%;
+    display:none;
+}
+.tv_contents.on{ /*유튜브 버튼을 눌렀을 때, addClass*/
+    display:block;
+}
+.tv_contents > ul > li {
+    width:30%;
+    height:100%;
+    float:left;    
+    overflow:hidden;
+    position:relative;
+}
+.tv_contents > ul > li > iframe {    
+    width:90%;
+    height:100%;
+    position:absolute;    
+}
+.tv_contents > ul > li > img:last-child{
+    top:0px;
+}
+/*~~~~~~~~~~~~~~~~~~~about_timber~~~~~~~~~~~~~~~~~~~~~~~~*/
+#wrap .about_timber {
+    width:100%;
+    height:100%;
+    background-image:url(../img/shop_pic2.jpg);
+    background-position:0px 0px;
+    background-size:100%;
+    position:relative;
+    top:0;
+    left:0;
+}
+#wrap .about_timber > h2{
+    color:#159494;
+    width:100%;
+    height:50px;
+    margin:0 auto;
+    text-align:center;
+    line-height:50px;
+    padding-top:5%;
+}
+#wrap .about_timber >p{
+    text-align:center;
+    line-height:30px;
+    font-size:20px;
+    margin:0 auto;
+    width:50%;
+    margin-top:1%;
+    color:#fff;
+}
+#wrap .about_timber > span > a{
+    display:block;
+    width:10%;
+    height:50px;
+    background:#159494;
+    text-align:center;
+    font-size:20px;
+    line-height:50px;    
+    border-radius:50px;
+    margin:30px auto;
+    color:#fff;
+    font-weight:bold;
+}
+#wrap .about_timber > span:hover a{
+    background:#ff0d74;
+    transition:0.4s;
+}
+/*~~~~~~~~~~~~~~~~~~~contact~~~~~~~~~~~~~~~~~~~~~~~~*/
+#wrap .contact_container {
+    width:100%;
+    height:100%;
+    background:#eee;
+    position:relative;
+}
+#wrap .contact_container > h2 {
+    width:100%;
+    color:#159494;
+    width:100%;
+    height:50px;    
+    text-align:center;
+    line-height:50px; 
+    padding-top:20px;
+    padding-bottom:10px;
+}
+/*~~~~~~~~~~~~~~~social 계정 ~~~~~~~~~~~~~~ */
+#wrap .contact_container  .connect {
+    position:relative;
+    width:100%;
+    height:10%;   
+}
+#wrap .contact_container > .connect > ul {
+    width:50%;
+    top:-15%;
+    left:50%;
+    padding-left:38%;
+    padding-bottom:20px;
+    overflow:hidden;
+}
+#wrap .contact_container > .connect > ul > li{
+	position:relative;
+    top:-15%;
+    float:left;
+    margin-right:15px;
+    text-align:center;  
+}
+#wrap .contact_container > .connect > ul > li:last-child{
+    margin-right:0px;
+}
+#wrap .contact_container > .connect > ul > li > a {
+    display:block;
+    width:32px;
+    height:32px;
+    float:left;
+    text-indent:-9999em;
+}
+#wrap .contact_container > .connect > ul > li:nth-child(1) > a {
+    background:url(../img/icons.png) no-repeat 0px 0px; 
+}
+#wrap .contact_container > .connect > ul > li:nth-child(2) > a {
+    background:url(../img/icons.png) no-repeat 0px -32px;
+}
+#wrap .contact_container > .connect > ul > li:nth-child(3) > a {
+    background:url(../img/icons.png) no-repeat 0px -64px;
+}
+#wrap .contact_container > .connect > ul > li:nth-child(4) > a {
+    background:url(../img/icons.png) no-repeat 0px -96px;
+}
+/*~~~~~~~~~~~~~~~contact_bg ~~~~~~~~~~~~~~ */
+#wrap .contact_container > .contact_bg{
+    position:relative;
+    margin-top:20px;
+    width:100%;
+    height:240px;
+    background-image:url(../img/contact_background.jpg);    
+    background-position: center top;
+} 
+#wrap .contact_container ul {    
+    width:350px; 
+    height:180px;
+    margin:0 auto;
+    padding-top:30px;
+}
+#wrap .contact_container ul li{
+    color:#fff;
+    font-size:14px;
+    line-height:30px;
+    text-align:center;
+    font-weight:bold;
+}
+#wrap .contact_container .timber_tv{
+    width:100%;
+    height:30%;
+    background-image:url(../img/banner_animation_nologo.gif);
+}
+#wrap .contact_container .timber_tv img{    
+    position:relative;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+}
+

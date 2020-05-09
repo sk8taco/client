@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>3.내장함수(confirm)(3).html</title>
+  
+  
+ </head>
+ <body>
+     <script type="text/javascript">
+         //형식)confirm("동의를 구하는 메세지");
+         var result = confirm("Are you sure?");
+         if(result)//if(result==true) // 조건식에서 true는 생략이 가능
+         {
+             alert("탈퇴 처리를 \n도와드렸습니다.");
+             alert("두번째 확인");
+         }else{
+             alert("보류해주셔서\n감사합니다.");
+         }
+         
+         // {} => 범위(실행되는 범위)를 지정 -> 블럭 처리 (실행문이 2문장 이상인 경우 블럭처리)
+     </script>
+ </body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>1.함수의 개요,작성 및 사용법(1).html </title>
+  <script type="text/javascript">
+      /*
+        프로그램을 작성(=회사운영)
+        함수 => 어떤 기능을 가진 최소한의 작업단위(=직원)
+        함수의 종류 => 1)내장함수 2)사용자정의함수
+        
+        기능별로 분류
+        1)매개변수 X 반환값 X
+            -> 단순하고 반복적인 일을 하는 기능
+        2)매개변수 O 반환값 X 
+            -> 값을 입력 -> 계산, 저장, 출력
+                (금액이 작은 계산-> 보고 안해도 됨)
+        3)매개변수 O 반환값 O
+            -> 값을 입력 -> 주로 계산 목적
+                (금액이 큰 계산-> 보고 해야함)
+      */
+      function print(){
+          document.write("단순하고 반복적인 일을 주로 담당 <br>");
+      }
+      
+      //2. 매개변수 O, 반환값 X
+      function print2(su){
+          //자료형->문자,숫자,논리적인값 지정(지정->크기,종류)
+          document.write("입력받은 값은 "+su+"입니다<br>")         
+      }
+      //3. 매개변수 O, 반환값O
+      function print3(su,su2){//소액계산
+            document.write("su+su2="+(su+su2)+"입니다");
+      }
+      function print4(su,su2){//금액이 큰 경우엔 보고->반환값          
+          var result;
+          result = su + su2;
+          return result;
+      }
+         
+      function ar(){
+          var Ar = new Array;
+          for (var i =0; i<4; i++){
+                Ar[i]=parseInt(prompt("배열데이터를 입력",0));
+          }
+	      document.write("Ar 배열의 2, 4번째 데이터의 합은" + (Ar[1]+Ar[3])+ "입니다.</br>");
+
+	      for(var j=0; j<4; j++){
+		  document.write(Ar[j]+"</br>");
+          }         
+          
+      }
+  </script>
+ </head>
+ <body> 
+     <script type="text/javascript">
+        //함수호출(=업무지시) = > 함수명() or 함수명(매개변수)
+         print();
+         print2(3); //print2함수를 호출, 매개변수 3을 전달
+         print3(40,50);
+         document.write("<br>");
+         //리턴(=보고서)를 받는 함수의 경우 => 형식)반환받는 변수명 = 호출할함수명(매개변수~)
+         var result = print4(10,20);
+         document.write("su+su2 = "+result+"입니다");        
+     </script>
+     <!--
+         함수호출 => 사이트에서 웹상에서 버튼을 누르거나 링크문자열을 클릭
+         1. 버튼클릭->함수호출
+             이벤트(Event)-> 운영체제가 인식 가능한 사용자들의 모든 행동양식(키보드, 마우스)
+             
+            형식) on이벤트종류명 ="연결해서 호출할 함수명()"
+                              ="단순한 자바스크립트 구문;구문2;구문3;"
+         2. 링크문자열을 클릭 -> 함수호출
+<a href="#" on이벤트종류명 = "연결해서 호출할 함수명()">링크문자열</a>
+         
+         
+     -->
+     <br>     
+     <button id="btn" onclick="alert('이벤트호출연습중')">계산목적</button>
+     <br>
+     <button id="btn2" onclick="ar()">함수호출</button>
+     <br>
+     <a href="#" onclick="print2('매개변수전달')">함수 호출 유형 연습</a>
+     
+ </body>
+</html>

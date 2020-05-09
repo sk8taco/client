@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>3.인접클래스.html</title>
+        <style type="text/css">   
+            /*
+                인접클래스 종류(트리구조)
+                부모태그 > 자식태그 (부모태그 안에 존재하는 자식태그에만 적용)
+                부모태그 자식태그 (부모태그에 속해 있는 자식, 손자태그까지 적용)
+            */
+            div > p {
+                color:blue;
+            }
+            
+            span ul {
+                color:green;    
+            }
+        </style>
+    </head>
+    <body>
+        <h1>인접클래스</h1>
+        <p>자식1</p>
+        <p>자식2</p>
+        <div>
+            <p>자식3</p>
+            <p>자식4</p>
+        </div>
+        <span>
+            <ul>하위요소
+                <li>자식5</li>
+                <li>자식6</li>
+            </ul>
+        </span>
+    </body>
+</html>

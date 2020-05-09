@@ -1,0 +1,27 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title><8 class="8.DOM2(태그생성)(8).html"></8>(7-1).html</title>
+  <script type="text/javascript">
+      function test2(){
+          //1. h1태그를 생성 -> document.createElement("생성할 태그 이름")
+          var header = document.createElement("h1"); // <h1></h1>
+          //alert(header); [object~] 배열형태로 객체가 표시됨
+          //2.태그내부에 존재하는 문자열 : textNode 생성
+          //형식)document.createTextNode("출력할 문자열");
+          var textNode = document.createTextNode("DOMTest!"); // innerHTML속성과 동일
+          //3.<h1>DOMTest!</h1> -> 부모태그명.appendChild(추가시킬 태그명)
+          
+          header.appendChild(textNode);
+          //4.화면에 출력 -> body 태그에 결합 -> document.body
+          // 
+          document.body.appendChild(header);
+          
+      }
+  </script>
+ </head>
+ <body onload ="test2()">
+     
+ </body>
+</html>

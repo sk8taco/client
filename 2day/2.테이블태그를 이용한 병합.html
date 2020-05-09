@@ -1,0 +1,35 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>2.테이블태그를 이용한 병합.html
+  </title>
+ </head>
+ <body>
+   <!-- <center>로 묶으면 가운데 정렬 -->    
+   <!--
+       bgcolor = "배경색"
+       가로로 병합 (colspan = "병합할 갯수(합치는 갯수)"
+       세로로 병합 (rowspan = "병합할 갯수(=세로로 합치는 수)")
+    -->
+     <table align="center" width="70%" height="70%" border="1" cellspacing="0" cellpadding="0">
+        <caption>참가자 목록</caption> <!-- 표의 제목 -->
+         <tr bgcolor="yellow">
+             <!--<th>이름</th>
+             <th>나이</th>-->
+             <th colspan="3"> 회원 </th>
+             <!-- <th>성별</th> -->
+         </tr>
+         <tr>
+             <td>홍길동</td>
+             <td>&nbsp;&nbsp;&nbsp;</td> <!-- 테이블 내에 데이터 X, 모양을 유지할 때 공백을 입력 -->
+             <td rowspan="2" align="center" valign="middle">남</td>
+         </tr>
+         <tr>
+             <td>테스트</td>
+             <td>20</td>
+             <!-- <td>남</td> -->
+         </tr>
+     </table>      
+ </body>
+</html>

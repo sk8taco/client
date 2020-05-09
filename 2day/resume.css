@@ -1,0 +1,41 @@
+body {
+    margin:0 auto; 
+    padding:0;
+    width:1000px;
+    height:1200px;    
+}
+
+form {
+    margin:10px;
+}
+.entire{
+    width:100%;
+    border:1px solid #333;
+    padding:25px;
+    margin:5px;
+    overflow:hidden;
+}
+
+table td {
+    width:25%;
+    border:1px solid #333;
+        
+    }
+
+table td input {
+    width:100%;
+}
+
+th {    
+    
+}
+#salary {width:80%;}
+#email, #mail_select {width:47%;}
+
+
+.univ {
+    width:100%;
+    padding:25px;
+    margin:5px;
+    border:1px solid #333;
+}

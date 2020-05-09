@@ -1,0 +1,72 @@
+<xmeta http-equiv="content-type" content="text/html; charset=utf-8"><!--  --><div dir="ltr">
+		<xmeta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	 	
+        <xlink rel="stylesheet" href="ex34_membership_style.css">
+	
+
+	
+    	<section>
+        	<form method="post">
+            	<fieldset>
+                	<legend>회원가입양식</legend>
+                    <p> 아래에 있는 필수정보를 입력하세요. </p>
+                    <table>
+                    	<caption>회원필수정보</caption>
+                        <tbody><!-- 테이블 바디 부분 --><tr><th colspan="1" rowspan="1" scope="row"> <label for="name"> 이름 </label> </th><!-- label로 묶어줄수있도록 수정 --><td><input type="text" name="name"></td></tr><tr><th colspan="1" rowspan="1" scope="row"> 생년월일 </th><td>
+                                	<select name="birth"><option value="2018">2018</option><option value="1988">1988</option></select>년
+                                    <select name="birth"><option value="1">1</option><option value="2">2</option><option value="12">12</option></select>월
+                                    <select name="birth"><option value="1">1</option><option value="13">13</option><option value="31">31</option></select>일
+                                </td></tr><tr><th colspan="1" rowspan="1" scope="row"> 성별 </th><td>
+                                	<input type="radio" name="gender" value="m">
+                                    <label for="m">남자</label>
+                                    <input type="radio" name="gender" value="w">
+                                    <label for="w">여자</label>
+                                </td></tr><tr><th colspan="1" rowspan="1" scope="row">이름(영문)</th><td>
+                                	<label for="fm">Family Name(성) </label>
+                                    <input type="text" name="e_name">
+                                    <label for="fst">First Name(이름)</label>
+                                    <input type="text" name="e_name">
+                               </td></tr><tr><th colspan="1" rowspan="1" scope="row">아이디</th><td>
+                                	<input readonly="" type="text" name="id">
+                                    <button type="button" name="dupl_chk">중복확인</button>
+                                </td></tr><tr><th colspan="1" rowspan="1" scope="row"><label for="pw">비밀번호</label></th><td>
+                                	<input maxlength="16" type="password" name="pw">
+                                </td></tr><tr><th colspan="1" rowspan="1" scope="row"><label for="email1">이메일</label></th><td>
+                                	<input type="text" name="email">@
+                                    <input type="text" name="email">
+                                    <select name="email"><option value="">이메일을 선택하세요</option><option value="1">google</option><option selected="" value="0">직접입력</option></select>
+                                 </td></tr><tr><th colspan="1" rowspan="1" scope="row"><label for="ph">연락처</label></th><td>
+                                	<p>
+                                    	<label for="local">일반전화</label>
+                                        <select name="tel"><option value="02">02</option></select>-
+                                     	<input maxlength="4" type="text" name="tel">-
+                                        <input maxlength="4" type="text" name="tel">
+                                    </p>
+                                    <p>
+                                    	<label for="mb">휴대전화</label>
+                                        <select name="mb"><option value="010">010</option></select>-
+                                    	<input maxlength="4" type="text" name="mb">-
+                                        <input maxlength="4" type="text" name="mb">
+                                    </p>
+                                 </td></tr><tr><th colspan="1" rowspan="1" scope="row"> 주소 </th><td>
+                                	<p>
+                                    	<input maxlength="5" readonly="" type="text" name="form_num">
+                                        <button type="button" name="form_search">우편번호검색</button>
+                                    </p>
+                                    <p>
+                                    	<input readonly="" type="text" name="addr" placeholder="기본주소">
+                                    </p>
+                                    <p>
+                                    	<input disabled="" type="text" name="addr" placeholder="상세주소">
+                                    </p>
+                                 </td></tr></tbody>
+                       </table>
+                       <div>
+                       	<button type="reset">이전단계</button>
+                        <button type="submit">다음단계</button>
+                       </div>
+                </fieldset>
+            </form>
+	
+
+</section></xlink></xmeta>

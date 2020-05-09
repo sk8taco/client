@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>4.다중if문(4).html</title>
+  <!--
+      1) 기본적인 if문
+          if(조건식)
+              수행1
+          else
+              수행2
+    
+      but, 조건식에 따라 처리할 문장이 하나 이상인 경우 사용 -> 다중if 문 -> 실행속도가 느려진다.
+      
+      
+      2) 다중if문
+         ex) 성적처리 90->A, 80->B, 70->C,,,,
+          if(조건식1)
+              수행1
+          else if(조건식2)
+              수행2
+          else if(조건식3)
+              수행3
+              ...
+          else
+              수행4      
+  
+  --> 
+ </head>
+ <body>
+     <script type="text/javascript">
+         var qs = prompt("당신이 좋아하는 언어? 선택 - 1.자바 2.자바스크립트 3.C언어 \n(숫자 혹은 언어이름을 입력해주세요)","");
+         
+         if(qs=="자바" || qs==1){
+             document.write("당신은 자바를 좋아하시는 군요.<br>");
+             document.write("당신은 1을 입력하셨군요");
+         }else if(qs == "자바스크립트" || qs==2){
+             document.write("당신은 자바스크립트를 좋아하시는 군요.<br>");
+             document.write("당신은 2를 입력하셨군요");
+         }else if(qs == "C언어" || qs==3){
+             document.write("당신은 C언어를 좋아하시는 군요.<br>");
+             document.write("당신은 3을 입력하셨군요");
+         }else{
+             alert("최소 한개의 언어는 입력해야합니다.");
+             window.location.reload();
+         }
+     </script>
+ </body>
+</html>

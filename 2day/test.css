@@ -1,0 +1,10 @@
+/*body, header, section, article, footer {margin:0; padding:0;}
+body { width:1000px; margin:0 auto;}*/
+
+h3, ol{
+    font-family:돋움체;
+    font-size:14pt;
+    color:green;
+    font-weight:bold; /* 100, 200, ...*/
+}
+

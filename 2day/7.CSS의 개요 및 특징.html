@@ -1,0 +1,53 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+     <title>7.CSS의 개요 및 특징(1).html</title>
+     <style type="text/css">
+         /* 
+             2.웹문서에서 공통으로 사용하는 색상, 이미지, 폰트 등을 head 영역에 선언하여 사용하는 방식의 스타일
+         형식) 스타일 적용시킬 태그(=선택자),,, {속성명 : 값;}
+         */
+         h3,h4 {
+             font-family:돋움체 sans-serif; color:#36f; font-size:27pt; }
+      </style>
+      <!-- 
+          3. 따로 파일로 만들어 링크하는 방법 
+              rel(stylesheet), type(텍스트형태의 css)
+              href="경로포함하여 불러올 스타일시트파일명.css"
+      -->
+      <link rel="stylesheet" type="text/css" href="test.css">
+      
+ </head>
+ <body>
+     <header>
+         <h3>CSS의 개요 및 특징</h3>         
+     </header>
+     <section>
+        <header>
+           <!-- 
+               1.인라인방식
+                   형식) style"속성명:값(단위); 속성명2:값(단위);"
+                        동일한 태그에 스타일이 적용될 경우 -> 우선순위가 높다.
+                        
+           -->
+            <h4 style="font-family:궁서체; background:yellow; font-size:20pt; color:#f00;">스타일시트의 장점</h4>
+        </header>
+        <article>
+            <ol>
+                <li>디자인의 시간이 단축</li>
+                <li>문서 로딩속도가 단축</li>                
+            </ol>
+        </article>
+        <article>
+           <ol>
+              <h4>용어정리</h4>
+               <li>스타일(Style):문서의 글꼴,크기,간격 등의 출력 형태(layout)에 영향을 미치는 요소</li>
+               <li>스타일시트(StyleSheet):스타일의 내용만을 별도로 모아서 haed태그 영역에 선언된 형태</li>               
+           </ol>
+            
+        </article>
+         
+     </section>
+ </body>
+</html>

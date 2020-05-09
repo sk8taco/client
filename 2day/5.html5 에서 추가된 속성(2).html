@@ -1,0 +1,62 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>5.html5 에서 추가된 속성(2).html</title>
+ </head>
+ <body>
+     <form name="frm">
+        <!-- 
+            웹상에서 입력받을 때 숫자 -> 문자로 취급 =>"홍길동"
+                                  -> "23" (문자열 상수) -> 겉은 숫자인데 내부적 문자
+                                     상수 => 한번 정해지면 변하지 않는 값(숫자)
+                                     "23"->23
+            tpye="number" min="" max="" step="증가/감소" value="현재숫자값"
+    
+        -->
+          원하는 주문갯수를 설정해주세요 <br>
+         <input type="number" name="order" main="1" max="200" step="5" value="1"><br>
+         <!-- range -->
+         <input type="range" name="order2" main="1" max="200" step="2" value="1" ><br>
+         <!-- search(검색할 때) -->
+         <input type="search"><br> <!-- 입력한 값을 취소시 x를 클릭하면 된다 -->
+         원하는 색상을 선택하세요. <br>
+         <input type="color">
+         <p>
+         <!-- 콤보박스의 변형 autofocus="autofocus"(자동커서) -->
+         과목 : <input type="text" placeholder="과목을 반드시 입력하세요" autofocus="autofocus" list="suggest"> <br>
+         <!-- list 속성은 id값을 매개변수로 가져와 해당id 값이 갖는 list 목록을 불러온다 : Binding 시킴 -->
+         <!-- 
+             textbox에 연결시켜서 보여줄 컴포넌트(datalist)tag를 사용
+             id => 1) css에서의 id 선택자로서 사용(스타일 적용시킬 목적)
+                   2) 언어로 사용 -> Javascript, jQuery
+                   binding => 연결
+                name도 id와 같은 역할
+         -->
+         <datalist id="suggest">
+             <option value="화면구현">
+             <option value="자바">
+             <option value="웹프로그래밍">
+             <option value="빅데이터">
+         </datalist> 
+         <datalist id="choice">
+             <option value="파이썬">
+             <option value="C">
+             <option value="DB">
+             <option value="C#">
+         </datalist>
+         
+         <!-- 진행과정 표시 -->
+         <progress id="p" value="80" max="100"></progress><br>
+         <!-- 백분율 표시(min(최소),max,value(현재값)) -->
+         <meter value="2" min="0" max="10">2 out of 10</meter><br>
+         <meter value="0.6">60%</meter>
+         </p>
+         <!-- 버튼을 눌렀을 때 어떤 버튼을 눌렀는지 컴퓨터의 구분(언어) name,id 속성 -->
+         <input type="button" value="전송" id="submit1" onclick="">
+         <input type="button" value="전송2" id="submit2" onclick="">         
+         
+     </form>
+  
+ </body>
+</html>

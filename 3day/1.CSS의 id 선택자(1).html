@@ -1,0 +1,39 @@
+<!doctype html>
+<html> <!-- 미리 만들어져 있는 문서의 틀 : template -->
+ <head>
+  <meta charset="UTF-8">
+  <title>1.CSS의 id 선택자(1).html</title>
+  <style type="text/css">
+      /*
+          id선택자 -> 전체 문서에서 유일한 값을 부여하여 스타일을 적용
+              형식) 태그명.클래스명
+                   태그명#id값(임의로 작성) => 선택자
+                   태그명을 생략해도 스타일 적용이 가능(id값이 유일한 값)
+      */
+      
+      div#x {
+          font-family:impact;
+          font-size:12pt;
+          font-weight:bold;
+          font-style:overline;
+          background-color:lime;
+      }
+      
+      #y {
+          color:#00f;          
+          text-indent:50px;
+      }
+      /*
+          text-indent:들여쓰기 (-수치로 안보이게 할 수도 있다)
+      */
+  </style>
+ </head>
+ <body>
+     <h2>id값은 원칙적으로 유일한 값 - 중복허용 X</h2>
+     <h1>h1태그</h1>
+     <h1 id="y">h1태그(id=y)적용</h1><br>
+     
+     <div>div태그</div>
+     <div id="x">div태그(id=x)적용</div>    
+ </body>
+</html>

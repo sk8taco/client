@@ -1,0 +1,17 @@
+/*
+    >=768px 이상에 적용
+*/
+.hd2, .sc2,.sc3 {
+    display:none;
+}
+*{ 
+    margin:0px;
+    padding:0px; /*좌측상단을 기준 여백 제거*/
+    background-color:azure; /*하늘 색*/
+}
+
+/*전체 컨테이너 영역(전체 넓이, 양쪽 여백 설정 */
+.wrap{
+    width:1000px;
+    margin:0 auto; /* margin-top,margin-bottom:0
+}
